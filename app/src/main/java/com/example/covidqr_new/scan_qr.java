@@ -39,7 +39,7 @@ public String res;
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //System.out.println("to user list");
                 Intent intent = new Intent(scan_qr.this,Userlist.class);
                 startActivity(intent);
             }
@@ -85,12 +85,8 @@ public String res;
                 String currentTime = "12.00";
                 String currentDate = "12/3/2022";
                 dbHandler.addNewLocal(currentTime, currentDate);
-
-
                 System.out.println("data to sqlite added ");
                 System.out.println(dbHandler.getdata());
-
-
             }
         }
         else{

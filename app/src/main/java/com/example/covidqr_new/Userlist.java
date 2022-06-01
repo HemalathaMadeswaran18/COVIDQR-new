@@ -19,16 +19,17 @@ public class Userlist extends AppCompatActivity {
     DBHandler DB;
     MyAdapter myAdapter;
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userlist);
+        //System.out.println("at userList");
         DB = new DBHandler(this);
         date = new ArrayList<>();
         time = new ArrayList<>();
         location = new ArrayList<>();
         displayData();
-        System.out.println("inside userlist");
-        recyclerView = findViewById(R.id.recyclerview);
+        System.out.println(date);
+        recyclerView = findViewById(R.id.recyclerview1);
         myAdapter = new MyAdapter(this,date,time,location);
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
@@ -37,7 +38,9 @@ public class Userlist extends AppCompatActivity {
 
     private void displayData() {
         Cursor cursor = (Cursor) DB.getdataC();
+        //System.out.println("start");
         while (cursor.moveToNext()){
+            //System.out.println("run");
             date.add(cursor.getString(0));
             time.add(cursor.getString(1));
             location.add(cursor.getString(2));
