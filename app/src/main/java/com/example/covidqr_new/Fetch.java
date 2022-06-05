@@ -28,7 +28,7 @@ public class Fetch extends AsyncTask<String, Void, String> {
 
 
             int rs = st.executeUpdate("INSERT INTO `MOVEMENT` (`USER_ID`, `USER_NAME`, `LOCATION`) " +
-                    "VALUES ('" + id + "', '" + name + "', '" + scan_qr.loc + "');");
+                    "VALUES ('" + id + "', '" + signin_class.username + "', '" + scan_qr.loc + "');");
 
 
             res = result;

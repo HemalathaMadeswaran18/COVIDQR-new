@@ -9,10 +9,11 @@
         <entry key="..\:/Users/dhanp/AndroidStudioProjects/COVIDQR-new/app/src/main/res/layout/signup_page.xml" value="0.358695652173913" />
         <entry key="..\:/Users/dhanp/AndroidStudioProjects/COVIDQR-new/app/src/main/res/layout/userentry.xml" value="0.358695652173913" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18355407714843752" />
+        <entry key="app/src/main/res/layout/activity_positive_test.xml" value="0.146875" />
         <entry key="app/src/main/res/layout/activity_userlist.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/scan_qr_ui.xml" value="0.296875" />
-        <entry key="app/src/main/res/layout/signin_page.xml" value="0.43503417968750013" />
-        <entry key="app/src/main/res/layout/signup_page.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/scan_qr_ui.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/signin_page.xml" value="0.20562591552734377" />
+        <entry key="app/src/main/res/layout/signup_page.xml" value="0.25346260387811637" />
         <entry key="app/src/main/res/layout/userentry.xml" value="0.146875" />
       </map>
     </option>

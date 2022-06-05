@@ -1,5 +1,6 @@
 package com.example.covidqr_new;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
@@ -37,16 +38,6 @@ public class Signup_page extends AppCompatActivity {
 
 
 
-        name = ed_name.getText().toString();
-        email = ed_email.getText().toString();
-
-        phone = ed_phone.getText().toString();
-
-        college = ed_college.getText().toString();
-
-        password = ed_password.getText().toString();
-
-        confirm_pass = ed_conf_password.getText().toString();
 
 
 
@@ -55,8 +46,30 @@ public class Signup_page extends AppCompatActivity {
         signup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                name = ed_name.getText().toString();
+                email = ed_email.getText().toString();
+
+                phone = ed_phone.getText().toString();
+
+                college = ed_college.getText().toString();
+
+                password = ed_password.getText().toString();
+
+                confirm_pass = ed_conf_password.getText().toString();
+
+                System.out.println("text"+name);
+
+
                 Send send  = new Send();
                 send.execute("");
+
+//                Intent intent = new Intent(Signup_page.this, scan_qr.class);  //from and to ----------------------------!!!!!!!!
+//                startActivity(intent);  //to open login page
+
+
+
+
             }
         });
 

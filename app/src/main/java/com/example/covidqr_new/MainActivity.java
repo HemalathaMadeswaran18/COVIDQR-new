@@ -9,10 +9,13 @@ import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton open_scan_btn;
-    Button signout;
+    Button signup,login;
 
 
 
@@ -23,8 +26,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
+
+
+
 open_scan_btn=findViewById(R.id.floatingActionButton);
-signout = findViewById(R.id.button3);
+        signup = findViewById(R.id.main_signup);
+        login = findViewById(R.id.main_login);
         open_scan_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,10 +43,18 @@ signout = findViewById(R.id.button3);
             }
         });
 
-        signout.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,Signup_page.class);
+                startActivity(intent);
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,signin_class.class);
                 startActivity(intent);
             }
         });
